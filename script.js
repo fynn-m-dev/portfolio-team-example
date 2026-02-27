@@ -196,10 +196,5 @@ members.forEach(member => {
     
 
             
-    
-    
-console.log("BELLO TEMPLATE!!!");
-console.log("this is a test");
-
 
 })
