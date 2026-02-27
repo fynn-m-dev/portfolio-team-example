@@ -1,0 +1,59 @@
+            <div class="cards">
+                <div class="card" data-target="socials-apollo">
+                    <a href="#apollo-socials">
+                 <div class="visual-layer"></div>
+                 <div class="content">
+                    <img src="images/Apollo.jpg" alt="Apollo">
+                    <h3>Apollo</h3>
+                    <div class="text-wrapper">
+                    <p>"The Autistic" of the group, Apollo creates variety content focused on funny moments and dumb humor.</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+                <div class="card" data-target="socials-mmatickz">
+                    <a href="#mmatickz-socials">
+                 <div class="visual-layer"></div>
+                 <div class="content">
+                    <img src="images/MMatickz.jpg" alt="MMatickz">
+                    <h3>MMatickz</h3>
+                    <div class="text-wrapper">
+                    <p>The oldest of the group (unc), creates variety content with just as little braincells as Apollo. ;)</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+                <div class="card" data-target="socials-hexikal">
+                    <a href="#hexikal-socials">
+                 <div class="visual-layer"></div>
+                 <div class="content">
+                    <img src="images/Hexikal.jpg" alt="Hexikal">
+                    <h3>Hexikal</h3>
+                    <div class="text-wrapper">
+                    <p>Also known as "Hexikalboom", he creates Minecraft SMP content, he's boosted by llama's thumbnail skills icl.</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+                <div class="card" data-target="socials-llama">
+                    <a href="#llama-socials">
+                 <div class="visual-layer"></div>
+                 <div class="content">
+                    <img src="images/llamapear.jpg" alt="llamapear">
+                    <h3>Llamapear</h3>
+                    <div class="text-wrapper">
+                    <p>The artist of the group, seems like he put all of his points into art and very little into intelligence.</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+            </div>
+
+
+
+
+
+            <iframe width="1173" height="781" src="https://www.youtube.com/embed/ltOMPFrBu4o" title="Hexikal lists Apollo&#39;s strenghts 💪" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="1173" height="660" src="https://www.youtube.com/embed/TUETZLWEDnU" title="Hunting Minecraft&#39;s Forgotten Mythics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="1173" height="660" src="https://www.youtube.com/embed/QdLoRob5ZyA" title="3 Minutes and 50 Seconds of Autism with Friends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="1173" height="660" src="https://www.youtube.com/embed/c1iIsa8t_xk" title="CHOKE YOU || Lifesteal S6 Finale Animatic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
