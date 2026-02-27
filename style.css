@@ -200,7 +200,7 @@ html {
             border-radius: 100%;
         }
 
-        .Pure_Shits h2 {
+        .Team_Page h2 {
             font-family: "Helvetica", monospace;
             font-size: 45px;
             font-weight: bold;
@@ -209,7 +209,7 @@ html {
             margin: 0px;
         }
 
-        .Pure_Shits h3 {
+        .Team_Page h3 {
             font-family: "Dubai", monospace;
             font-size: 30px;
             font-weight: bold;
@@ -217,7 +217,7 @@ html {
             margin: 20px;
         }
         
-        .Pure_Shits p {
+        .Team_Page p {
             
             pointer-events: none;
             overflow: hidden;
@@ -235,7 +235,7 @@ html {
             transition: color 0.15s ease 0s;
         }
         
-        .Pure_Shits {
+        .Team_Page {
             
             padding-top: 30px;
             padding-bottom: 10px;
@@ -243,17 +243,17 @@ html {
             
         }
 
-        .Pure_Shits_Link {
+        .Team_Page_Link {
             transform: translateY(-250px);
         }
 
-        .Pure_Shits h6 {
+        .Team_Page h6 {
             text-align: center;
             font-family: "Dubai", monospace;
             font-size: 15px;
         }
 
-        .Pure_Shits a {
+        .Team_Page a {
             text-decoration: none;
             color:black;
         }

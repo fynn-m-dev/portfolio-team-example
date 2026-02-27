@@ -1,4 +1,5 @@
 // Data
+// Array of team members, members can be added and remove to you liking using the template (id: 0), the cards and socials update automatically
 const members = [
     {
         id: 0,
@@ -15,55 +16,55 @@ const members = [
     },
     {
         id: 1,
-        name: "Apollo",
-        img: "images/Apollo.jpg",
-        description:"The Autistic of the group, Apollo creates variety content focused on funny moments and dumb humor.",
+        name: "Member 1",
+        img: "images/placeholderperson.jfif",
+        description:"A description that fits the person well! (hopefully)",
         socials: {
-            youtube: "https://www.youtube.com/@apollowaslive",
-            twitch: "https://www.twitch.tv/mtrashickz",
-            twitter: "https://x.com/_apollo_lol"
+            youtube: "https://www.example.com",
+            twitch: "https://www.example.com",
+            twitter: "https://www.example.com"
         },
-        channelid: "UC6YRSgu-AFZb593RaXQPEKw",
-        newstvid: "https://www.youtube.com/embed/QdLoRob5ZyA"
+        channelid: "UNUSED",
+        newstvid: "https://www.youtube.com/embed/VNu15Qqomt8" // placeholder video, can be replaced with anyting!
     },
     {
         id: 2,
-        name: "MMatickz",
-        img: "images/MMatickz.jpg",
-        description: "The oldest of the group (unc), creates variety content with just as little braincells as Apollo. ;)",
+        name: "Member 2",
+        img: "images/placeholderperson.jfif",
+        description: "A description that fits the person well! (hopefully)",
         socials: {
-            youtube: "https://www.youtube.com/@MMatickz",
-            twitch: "https://www.twitch.tv/mtrashickz",
-            twitter: "https://x.com/MMatickz"
+            youtube: "https://www.example.com",
+            twitch: "https://www.example.com",
+            twitter: "https://www.example.com"
         },
-        channelid: "UCTWyt_x1rWkHEEVs_3E1vAw",
-        newstvid: "https://www.youtube.com/embed/ltOMPFrBu4o"
+        channelid: "UNUSED",
+        newstvid: "https://www.youtube.com/embed/4bHUsy74Fss"
     },
     {
         id: 3,
-        name: "Hexikal",
-        img: "images/Hexikal.jpg",
-        description: "Also known as Hexikalboom, he creates Minecraft SMP content, he's boosted by llama's thumbnail skills icl.",
+        name: "Member 3",
+        img: "images/placeholderperson.jfif",
+        description: "A description that fits the person well! (hopefully)",
         socials: {
-            youtube: "https://www.youtube.com/@Hexikalboom",
-            twitch: "https://www.twitch.tv/hexikalboom_",
-            twitter: "https://x.com/Hexikalboom"
+            youtube: "https://www.example.com",
+            twitch: "https://www.example.com",
+            twitter: "https://www.example.com"
         },
-        channelid: "UCl_kHL1Qcixd4vpM1WcYG6w",
-        newstvid: "https://www.youtube.com/embed/TUETZLWEDnU"
+        channelid: "UNUSED",
+        newstvid: "https://www.youtube.com/embed/pb-j3svRQLI"
     },
     {
         id: 4,
-        name: "Llamapear",
-        img: "images/llamapear.jpg",
-        description: "The artist of the group, seems like he put all of his points into art and very little into intelligence.",
-        socials: {
-            youtube: "https://www.youtube.com/@llama_pear",
-            instagram: "https://www.twitch.tv/llamapear",
-            twitter: "https://x.com/llama_pear"
+        name: "Member 4",
+        img: "images/placeholderperson.jfif",
+        description: "A description that fits the person well! (hopefully)",
+        socials: {                                       // socials can be adjusted and replaced to the client's preferences
+            youtube: "https://www.example.com",
+            instagram: "https://www.example.com",
+            twitter: "https://www.example.com"
         },
-        channelid: "UCTRs61PKKF6JKermwJNTpHQ",
-        newstvid: "https://www.youtube.com/embed/c1iIsa8t_xk"
+        channelid: "UNUSED", // in preperation for API integration
+        newstvid: "https://www.youtube.com/embed/CUlAg4iqeTQ"
     },
 ]
 
@@ -98,7 +99,7 @@ members.forEach(member => {
           card.appendChild(visuals);
           card.appendChild(wrapper);
           content.innerHTML =`
-          <img src="${member.img}" alt="${member.name}">
+          <img src="${member.img}" alt="${member.name}" width="150" height="auto">
           <h3>${member.name}</h3>
           
 
