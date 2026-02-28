@@ -80,7 +80,7 @@ let autoscroll = 0;
 
             
 // Event listeners
-nav.addEventListener("click", () => {
+nav.addEventListener("pointerdown", () => {
     autoscroll = 1;
     setTimeout(() => autoscroll = 0, 8000)
 })
@@ -166,7 +166,7 @@ members.forEach(member => {
 
     
 
-    card.addEventListener('click', 'Touch', () => {
+    card.addEventListener('pointerdown', () => {
         const socials = [...document.querySelectorAll('.Social')];
         socials.forEach(s => s.classList.remove('active-card'));
 
