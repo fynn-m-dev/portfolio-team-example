@@ -6,7 +6,7 @@ html {
             
             background-color: #ffa400;
             position: relative;
-            padding-top: 90px;
+            padding-top: 190px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -52,7 +52,7 @@ html {
         body {
             min-height: 200vh;
             margin: 0;
-            background:linear-gradient(1)
+            background:linear-gradient()
         }
 
         nav.sections {
@@ -66,6 +66,8 @@ html {
             right: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            height: 120px;
+            transition: transform 0.3s ease;
         }
 
 
@@ -87,9 +89,10 @@ html {
             text-decoration: none;
             color:black;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 50px;
             transform: scale(1);
-
+            transform: translateX(-15px);
+            padding: 20px;
             transition: color 0.2s linear, transform 0.2s ease;
             
            
@@ -102,28 +105,14 @@ html {
             
         }
 
-        @media (min-width: 768px) {
-            header .header-content {
-                flex-direction: row;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                gap: 40px
-            }
-            header .header-text {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            header .header-text h1 {
-                font-size: 80px;
-            }
-            header .header-content .bgimg {
-            width: 400px;
-            height: 400px;
+
             
+        .hidden {
+        transform: translateY(-100%);
         }
-        }
+            
+        
+        
 
         .cards {
             display: flex;
@@ -136,10 +125,12 @@ html {
         .card {   
             border-radius: 0px;
             text-align: center;
-            max-height: 270px;
-            height: 250px;
+            max-height: 300px;
+            height: 300px;
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 50px;
+            padding: 20px;
             
             
         }
@@ -153,7 +144,7 @@ html {
             right: 0;
             left: 0;
             transform: translateY(-20px);
-            height: 260px;
+            height: 350px;
             scale: 100%;
             background-color: burlywood;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -173,28 +164,7 @@ html {
             transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
         }
 
-        .card.expanded .visual-layer {
-            transform: translateY(-25px);
-            height: 375px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            
-        }
-
-        .card.expanded .content {
-            transform: translateY(-5px);
-            
-        }
-
-        .card.expanded p {
-            transition: color 0.8s ease;
-            color: rgba(0,0,0,1);
-        }
-
-        .card.expanded .text-wrapper {
-            pointer-events: auto;
-            max-height: 150px;
-        }
-
+        
         .content img {
             max-width: 100%;
             border-radius: 100%;
@@ -202,7 +172,7 @@ html {
 
         .Team_Page h2 {
             font-family: "Helvetica", monospace;
-            font-size: 45px;
+            font-size: 80px;
             font-weight: bold;
             text-align: center;
             padding-bottom: 20px;
@@ -211,7 +181,7 @@ html {
 
         .Team_Page h3 {
             font-family: "Dubai", monospace;
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
             margin: 20px;
@@ -250,7 +220,7 @@ html {
         .Team_Page h6 {
             text-align: center;
             font-family: "Dubai", monospace;
-            font-size: 15px;
+            font-size: 30px;
         }
 
         .Team_Page a {
@@ -284,11 +254,11 @@ html {
         }
         .who h3 {
             font-family: "Helvetica", monospace;
-            font-size: 45px;
+            font-size: 80px;
         }
         .who p {
             font-family: "Dubai", monospace;
-            font-size: 35px;
+            font-size: 45px;
         }
 
         .Socials {
@@ -300,16 +270,16 @@ html {
 
         .Socials h2 {
             font-family: "Helvetica", monospace;
-            font-size: 35px;
+            font-size: 70px;
             color: white;
         }
         .Socials h3 {
             font-family: "Dubai", monospace;
-            font-size: 35px;
+            font-size: 60px;
             color: white;
         }
         .Socials ul {
-            row-gap: 10px;
+            row-gap: 30px;
             transform: translateX(-20px);
             display: flex;
             flex-direction: column;
@@ -320,7 +290,7 @@ html {
         }
         .Socials a {
             font-family: "Helvetica", monospace;
-            font-size: 20px;
+            font-size: 40px;
             text-decoration: none;
             color: white;
             transition: color 0.2s ease;
@@ -358,7 +328,7 @@ html {
 
         .videos .videoplayers {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             text-align: center;
             align-items: center;
@@ -369,14 +339,14 @@ html {
 
         .videos h2 {
             font-family: "Helvetica", monospace;
-            font-size: 40px;
+            font-size: 80px;
             text-align: center;
             font-weight: bold;
         }
 
         .videos p {
             font-family: "Dubai", monospace;
-            font-size: 35px;
+            font-size: 60px;
             text-align: center;
             font-weight: bold;
         }
@@ -385,7 +355,7 @@ html {
             position: relative;
             font-family: "Dubai", monospace;
             font-weight: bold;
-            font-size: 35px;
+            font-size: 75px;
             text-align: center;
             gap: 305px;
             max-width: fit-content;
@@ -408,3 +378,231 @@ html {
         .videospot {
             transform: translateY(-100px);
         }
+
+        
+
+        .content img {
+            max-width: 200px;
+            max-height: auto;
+        }
+
+
+        @media (min-width: 768px) {
+            header .header-content {
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                gap: 40px;
+                padding-top: 80px;
+            }
+            header .header-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            header .header-text h1 {
+                font-size: 80px;
+            }
+            header .header-content .bgimg {
+            width: 400px;
+            height: 400px;
+            }
+
+            nav.sections {
+            display: flex;
+            padding: 20px; 
+            justify-content: center;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            height: 20px;
+        }
+
+        nav.sections a {
+            display: inline-block;
+            font-family: "Helvetica", monospace;
+            text-decoration: none;
+            color:black;
+            font-weight: bold;
+            font-size: 18px;
+            transform: scale(1);
+            transform: translateX(0);
+            padding: 0px;
+
+            transition: color 0.2s linear, transform 0.2s ease;
+            
+           
+        }
+        .who h3 {
+            font-family: "Helvetica", monospace;
+            font-size: 45px;
+        }
+        .who p {
+            font-family: "Dubai", monospace;
+            font-size: 35px;
+        }
+
+            .card {   
+            border-radius: 0px;
+            text-align: center;
+            max-height: 270px;
+            height: 250px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0px;
+            padding: 0px;
+            pointer-events: all;
+            }
+            .videos .videoplayers {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            gap: 100px;
+            }
+
+            .visual-layer {
+            position:absolute;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            transform: translateY(-20px);
+            height: 260px;
+            scale: 100%;
+            background-color: burlywood;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 1;
+
+            transition: transform 0.3s ease, box-shadow 0.5s ease, height 0.5s ease;
+        }
+
+        .content {
+            width: 250px;
+            position: relative;
+            z-index: 2;
+            max-width: 250px;
+            overflow: hidden;
+            height: 350px;
+            pointer-events: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+        }
+        .content img {
+            max-width: 150px;
+            max-height: auto;
+        }
+        .Team_Page h2 {
+            font-family: "Helvetica", monospace;
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 20px;
+            margin: 0px;
+        }
+            .Team_Page h6 {
+            text-align: center;
+            font-family: "Dubai", monospace;
+            font-size: 15px;
+        
+        }
+
+        .Team_Page h3 {
+            font-family: "Dubai", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .videos h2 {
+            font-family: "Helvetica", monospace;
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .videos p {
+            font-family: "Dubai", monospace;
+            font-size: 35px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .videos h3 {
+            position: relative;
+            font-family: "Dubai", monospace;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+            gap: 305px;
+            max-width: fit-content;
+            top: 0px; left: 0px;
+        }
+        .card.expanded .visual-layer {
+            transform: translateY(-25px);
+            height: 375px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            
+        }
+
+        .card.expanded .content {
+            transform: translateY(-5px);
+            
+        }
+
+        .card.expanded p {
+            transition: color 0.8s ease;
+            color: rgba(0,0,0,1);
+        }
+
+        .card.expanded .text-wrapper {
+            pointer-events: auto;
+            max-height: 150px;
+        }
+
+                .Socials h2 {
+            font-family: "Helvetica", monospace;
+            font-size: 35px;
+            color: white;
+        }
+        .Socials h3 {
+            font-family: "Dubai", monospace;
+            font-size: 35px;
+            color: white;
+        }
+        .Socials ul {
+            row-gap: 10px;
+            transform: translateX(-20px);
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .Socials a {
+            font-family: "Helvetica", monospace;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.2s ease;
+        }
+        .Socials img {
+            max-width: 100px;
+            max-height: auto;
+        }
+        .videos iframe {
+            max-width: 355px;
+            max-height: 200px;
+        }
+    }
+    @media (hover: none) {
+        .cards {
+            pointer-events: none;
+        }
+    }

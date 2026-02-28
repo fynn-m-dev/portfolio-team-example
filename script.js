@@ -74,10 +74,41 @@ const cards = document.querySelectorAll('.card');
 const cardcontainer = document.getElementById("cards-container");
 const socialcontainer = document.getElementById("socialcontainer");
 const videocontainer = document.getElementById("videocontainer")
+const nav = document.getElementById("nav");
+let lastScroll = 0;
+let autoscroll = 0;
 
             
 // Event listeners
+nav.addEventListener("click", () => {
+    autoscroll = 1;
+    setTimeout(() => autoscroll = 0, 8000)
+})
 
+addEventListener("scroll", () => {
+    if (autoscroll === 0){
+const currentscroll = window.pageYOffset;
+    
+        
+
+    if (currentscroll <= 0) {
+        nav.classList.remove("hidden");
+        return;
+    }
+    if (currentscroll > lastScroll) {
+        nav.classList.add("hidden");
+        console.log("Down");
+    }else{
+        nav.classList.remove("hidden");
+    console.log("up");
+    }
+
+    lastScroll = currentscroll;
+    }
+    
+
+
+})
 
 
 // Functions
@@ -99,7 +130,7 @@ members.forEach(member => {
           card.appendChild(visuals);
           card.appendChild(wrapper);
           content.innerHTML =`
-          <img src="${member.img}" alt="${member.name}" width="150" height="auto">
+          <img src="${member.img}" alt="${member.name}" class="ppicture">
           <h3>${member.name}</h3>
           
 
@@ -123,7 +154,7 @@ members.forEach(member => {
     socialsection.appendChild(sociallinks);
 
     sociallinks.innerHTML= `
-    <img src="${member.img}" alt="${member.name}" width="100" height="100">
+    <img src="${member.img}" alt="${member.name}" class="spicture">
     <ul>
                 <li><a href="${member.socials.youtube}" target="_blank">YouTube</a></li>
                 <li><a href="${member.socials.twitch}" target="_blank">Twitch</a></li>
@@ -188,8 +219,8 @@ members.forEach(member => {
     `;
     const video = document.createElement("iframe");
     video.src = `${member.newstvid}`;
-    video.width = "355";
-    video.height = "200";
+    video.width = "700";
+    video.height = "394";
     video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     video.allowFullscreen = true;
     videosection.appendChild(video);
