@@ -166,7 +166,7 @@ members.forEach(member => {
 
     
 
-    card.addEventListener('click', () => {
+    card.addEventListener('click', 'Touch', () => {
         const socials = [...document.querySelectorAll('.Social')];
         socials.forEach(s => s.classList.remove('active-card'));
 
