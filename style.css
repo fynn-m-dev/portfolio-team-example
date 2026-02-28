@@ -5,7 +5,7 @@ html {
             
             background-color: #ffa400;
             position: relative;
-            padding-top: 190px;
+            padding-top: 150px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -47,6 +47,7 @@ html {
             margin: 50px;
         }
 
+        
 
         body {
             min-height: 0;
@@ -56,7 +57,7 @@ html {
 
         nav.sections {
             display: flex;
-            padding: 20px; 
+            padding: 0px; 
             justify-content: center;
             background-color: white;
             position: fixed;
@@ -69,14 +70,19 @@ html {
             transition: transform 0.3s ease;
         }
 
+        nav.sections li {
+            text-align: center;
+        }
 
         nav.sections ul {
             list-style: none;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 60px;
             padding: 0;
             margin: 0;
+            
             
             
            
@@ -110,7 +116,10 @@ html {
         transform: translateY(-100%);
         }
             
-        
+        .hide {
+            opacity: 0;
+            transform: translateY(20px);
+        }
         
 
         .cards {
@@ -120,6 +129,7 @@ html {
             justify-content: center;
             padding: 40px 20px;
             z-index: 1;
+            
         }
 
 
@@ -163,7 +173,7 @@ html {
             font-size: 80px;
             font-weight: bold;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 80px;
             margin: 0px;
         }
 
@@ -210,6 +220,7 @@ html {
             text-align: center;
             font-family: "Dubai", monospace;
             font-size: 30px;
+            padding-bottom: 150px;
         }
 
         .Team_Page a {
@@ -387,7 +398,11 @@ html {
             max-width: 200px;
             max-height: auto;
         }
-
+        .hasfade {
+            flex-direction: column;
+            justify-content: center;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
 
         @media (hover: hover) {
             header .header-content {
@@ -504,7 +519,7 @@ html {
             font-size: 45px;
             font-weight: bold;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 80px;
             margin: 0px;
         }
             .Team_Page h6 {

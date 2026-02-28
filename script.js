@@ -69,23 +69,27 @@ const members = [
 ]
 
 // DOM references
-const cards = document.querySelectorAll('.card');
-
+const cards = document.querySelectorAll('.cards');
+const card = document.querySelectorAll('.card');
+const hasfade = document.querySelectorAll(".hasfade");
 const cardcontainer = document.getElementById("cards-container");
 const socialcontainer = document.getElementById("socialcontainer");
 const videocontainer = document.getElementById("videocontainer")
 const nav = document.getElementById("nav");
 let lastScroll = 0;
 let autoscroll = 0;
+let scroll = false;
 
             
 // Event listeners
 nav.addEventListener("pointerdown", () => {
     autoscroll = 1;
-    setTimeout(() => autoscroll = 0, 8000)
+    clearTimeout(this.timeoutID);
+    this.timeoutID = setTimeout(() => autoscroll = 0, 800)
 })
-
+    
 addEventListener("scroll", () => {
+hiddentracker(hasfade);
     if (autoscroll === 0){
 const currentscroll = window.pageYOffset;
     
@@ -117,6 +121,8 @@ members.forEach(member => {
 
     const card = document.createElement("div");
     card.classList.add("card");
+
+
 
           const content = document.createElement("div");
           const visuals = document.createElement("div");
@@ -162,11 +168,29 @@ members.forEach(member => {
     
     socialcontainer.appendChild(socialsection);
 
+    window.addEventListener('scroll', () => {
+                scroll = true;
+    })
+ window.addEventListener('scrollend', () => {
+                scroll = false;
+    })
+    card.addEventListener('click', () => {
+        CardClicked();
     
+    })  
+     
+    card.addEventListener('touchend', () => {
 
-    card.addEventListener('pointerdown', () => {
-        console.log("yup");
-        const socials = [...document.querySelectorAll('.Social')];
+        if (!scroll) {
+        CardClicked();
+        }
+
+    })  
+
+
+
+    function CardClicked() {
+const socials = [...document.querySelectorAll('.Social')];
         socials.forEach(s => s.classList.remove('active-card'));
 
                     const target = document.getElementById(`socials-${member.id}`);
@@ -176,7 +200,8 @@ members.forEach(member => {
                     window.scrollTo({top: topPos});
 
                     target.classList.add('active-card');
-    })
+    }
+        
 
     card.addEventListener("mouseenter", () => {
         card.classList.add("expanded");
@@ -226,6 +251,37 @@ members.forEach(member => {
     videocontainer.appendChild(videosection);
     
 
-            
+
+
 
 })
+
+function hiddentracker(el) {
+el.forEach(piece => {
+ IsItOnScreen(piece);
+
+})
+
+}
+
+
+    function getOffset(el) {
+        const rect = el.getBoundingClientRect();
+        return {
+            left: rect.left + window.scrollX,
+            top: rect.top + window.scrollY
+        };
+    }
+
+    function IsItOnScreen(el) {
+        const rect = el.getBoundingClientRect();
+        var offset = window.innerHeight;
+
+        if (window.scrollY + window.innerHeight >= rect.top  + offset) {
+            el.classList.remove("hide");
+        } else if (window.scrollY + window.innerHeight >= rect.top) {
+            el.classList.add("hide");
+        }
+    }
+    
+
