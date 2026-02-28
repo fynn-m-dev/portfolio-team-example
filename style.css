@@ -160,7 +160,6 @@ html {
             max-width: 250px;
             overflow: hidden;
             height: 350px;
-            pointer-events: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
         }
 
@@ -188,8 +187,7 @@ html {
         }
         
         .Team_Page p {
-            
-            pointer-events: none;
+        
             overflow: hidden;
             display: block;
             font-family: "Dubai", monospace;
@@ -230,7 +228,6 @@ html {
 
         .text-wrapper {
             
-            pointer-events: none;
             position: absolute;
             z-index: 1;
             bottom: 0;
@@ -387,7 +384,7 @@ html {
         }
 
 
-        @media (min-width: 768px || hover: hover) {
+        @media (hover: hover) {
             header .header-content {
                 flex-direction: row;
                 justify-content: center;
