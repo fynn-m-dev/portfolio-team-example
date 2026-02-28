@@ -97,10 +97,8 @@ const currentscroll = window.pageYOffset;
     }
     if (currentscroll > lastScroll) {
         nav.classList.add("hidden");
-        console.log("Down");
     }else{
         nav.classList.remove("hidden");
-    console.log("up");
     }
 
     lastScroll = currentscroll;
@@ -167,6 +165,7 @@ members.forEach(member => {
     
 
     card.addEventListener('pointerdown', () => {
+        console.log("yup");
         const socials = [...document.querySelectorAll('.Social')];
         socials.forEach(s => s.classList.remove('active-card'));
 

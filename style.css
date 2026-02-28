@@ -1,7 +1,6 @@
 html {
             scroll-behavior: smooth;
         }
-
         header .header-content {
             
             background-color: #ffa400;
@@ -50,7 +49,7 @@ html {
 
 
         body {
-            min-height: 200vh;
+            min-height: 0;
             margin: 0;
             background:linear-gradient()
         }
@@ -120,20 +119,10 @@ html {
             gap: 50px;
             justify-content: center;
             padding: 40px 20px;
+            z-index: 1;
         }
 
-        .card {   
-            border-radius: 0px;
-            text-align: center;
-            max-height: 300px;
-            height: 300px;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 50px;
-            padding: 20px;
-            
-            
-        }
+
 
         
 
@@ -208,6 +197,8 @@ html {
             padding-top: 30px;
             padding-bottom: 10px;
             background-color:cornsilk;
+            z-index: 0;
+            pointer-events: none;
             
         }
 
@@ -226,10 +217,24 @@ html {
             color:black;
         }
 
+        .card {   
+            border-radius: 0px;
+            text-align: center;
+            max-height: 300px;
+            height: 300px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 50px;
+            padding: 20px;
+            z-index: 10;
+            pointer-events: all;
+            
+        }
+
         .text-wrapper {
             
             position: absolute;
-            z-index: 1;
+            z-index: 0;
             bottom: 0;
             left: 0;
             top: 220px;
@@ -597,9 +602,26 @@ html {
             max-width: 355px;
             max-height: 200px;
         }
+
+        .text-wrapper {
+            
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            top: 220px;
+            right: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 200px;
+            max-height: 0px;
+            transition: max-height 0.5s ease;
+        }
     }
     @media (hover: none) {
         .cards {
             pointer-events: none;
         }
     }
+
+    
