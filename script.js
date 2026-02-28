@@ -80,6 +80,7 @@ let lastScroll = 0;
 let autoscroll = 0;
 let scroll = false;
 
+
             
 // Event listeners
 nav.addEventListener("pointerdown", () => {
@@ -87,6 +88,8 @@ nav.addEventListener("pointerdown", () => {
     clearTimeout(this.timeoutID);
     this.timeoutID = setTimeout(() => autoscroll = 0, 800)
 })
+
+
     
 addEventListener("scroll", () => {
 hiddentracker(hasfade);
@@ -114,6 +117,10 @@ const currentscroll = window.pageYOffset;
 
 
 // Functions
+
+hasfade.forEach(obj => {
+    obj.classList.add("hide");
+})
 
 members.forEach(member => {
 
@@ -250,10 +257,6 @@ const socials = [...document.querySelectorAll('.Social')];
     videosection.appendChild(video);
     videocontainer.appendChild(videosection);
     
-
-
-
-
 })
 
 function hiddentracker(el) {
@@ -283,5 +286,5 @@ el.forEach(piece => {
             el.classList.add("hide");
         }
     }
-    
+
 
